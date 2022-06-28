@@ -46,15 +46,15 @@ function handleSubmit(){
     </div>
     <main>
       <div>
-        <h2 class="mt-4 text-center text-xl font-light">You have <span class="text-emerald-700">{{
-            tasks.length
-          }}</span> TODOs</h2>
+        <h2 class="mt-4 text-center text-xl font-light">You have <span class="text-emerald-700">{{ tasks.length }}</span> TODOs</h2>
         <div v-for="task in tasks" key="task.id" class="p-2 my-3 bg-stone-100 rounded border-stone-600 border-[1px]">
           <div class="flex flex-col">
             <h4>{{ task.title }}</h4>
             <div class="flex flex-row justify-between">
               <span class="text-stone-500 font-light">{{ task.date }}</span>
-              <button @click="deleteTask(task)" class="bg-red-400 px-1.5 py-.5 rounded-[5px]">Delete</button>
+              <button @click="deleteTask(task)"
+                      class="bg-red-400 px-1.5 py-.5 rounded-[5px] hover:bg-red-300 transition-all duration-200 ease-in-out">
+                Delete</button>
             </div>
           </div>
         </div>
